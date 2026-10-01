@@ -1,0 +1,4 @@
+30 minutes morning class roadmap
+1 hr git and git hum with director,folder creation
+1 hr OSI layer reading including ip classes 
+30 minutes public and private ip address 
