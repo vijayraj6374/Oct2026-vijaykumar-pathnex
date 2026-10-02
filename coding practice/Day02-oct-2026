@@ -1,0 +1,48 @@
+  state: started
+  enable:ye
+
+## 🔹 Terraform — EC2 with Tags (r5.2xlarge)
+
+provider "aws"{
+region = "us-east-1"
+}
+resource "aws_instance""pathnexEC2"
+{
+ami  = "ami-0abcd1234abcd1234"
+instnace_type = "r5.2x1large"
+
+tags
+{
+Name = "Pathnex-Server
+Environment = "Training"
+owner = "pathnexstudent"
+}}
+
+
+## 🔹 Kubernetes — Deployment with 2 Replicas
+apiVersion : apps/v1
+kind : depoyment
+metadata :
+name : pathnex-deployment
+space:
+replicas : 2
+selector :
+matchlables:
+app : pathnex-app
+template :
+metadata :
+labels :
+app : pathnex-app
+space :
+container :
+-name : app
+image :nginx
+ports:
+- containerports :80
+
+## 🔹 Shell Script — Disk Usage
+
+#!/bin/bash
+df -h
+
+
