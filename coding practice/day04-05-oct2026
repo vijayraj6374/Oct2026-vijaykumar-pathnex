@@ -1,0 +1,43 @@
+pipeline{
+agent any
+stages{
+stage('parallel Task')
+{
+parallel
+{
+stage('build')
+{
+steps
+{
+sh 'mvn clean compile'
+}
+}
+stage('test')
+{
+steps{
+sh 'mvn test'
+}}
+}}
+}
+}
+## 🔹 GitLab CI — Parallel Jobs
+You will learn how to **run parallel jobs in GitLab CI**.
+
+stages:
+-build-test
+maven-build:
+stage: build-test
+image: maven:3.8.1-jdk-17
+script:
+-git clone https://github.com/pathnex/sample-java-app.git
+-cd sample-java-app
+-mvn clean compile
+parallel: 1
+maven-test:
+stage:build-test
+image: maven:3.8.1.jdk-17
+script:
+-cd sample-java-app
+-mvn test
+parallel: 1
+
