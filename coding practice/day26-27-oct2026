@@ -1,0 +1,5 @@
+Kittu@DESKTOP-812SGU6 MINGW64 ~/Desktop/AWS-Project/Oct2026_vijaykumar_Pathnex (27th-oct-2026)
+$ rm -f timings
+rm: cannot remove 'timings': Is a directory
+
+
